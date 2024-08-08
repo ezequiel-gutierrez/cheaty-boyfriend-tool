@@ -6,8 +6,8 @@ const rightUL = document.getElementById("right-words");
 function fetchWord() {
     const apiUrl = "https://api.datamuse.com/words?sp=";
     const input = inputField.value;
-    const requestExtendLeft = `${apiUrl}*${input}`;
-    const requestExtendRight = `${apiUrl}${input}*`;
+    const requestExtendLeft = `https://api.datamuse.com/words?sp=*${input}`;
+    const requestExtendRight = `https://api.datamuse.com/words?sp=${input}*`;
 
     leftUL.innerHTML = "";
     rightUL.innerHTML = "";
