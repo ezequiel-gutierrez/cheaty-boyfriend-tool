@@ -4,7 +4,7 @@ const leftUL = document.getElementById("left-words");
 const rightUL = document.getElementById("right-words");
 
 function fetchWord() {
-    const apiUrl = "http://api.datamuse.com/words?sp=";
+    const apiUrl = "https://api.datamuse.com/words?sp=";
     const input = inputField.value;
     const requestExtendLeft = `${apiUrl}*${input}`;
     const requestExtendRight = `${apiUrl}${input}*`;
