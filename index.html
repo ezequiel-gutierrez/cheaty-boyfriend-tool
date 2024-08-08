@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Party Word Finder</title>
+    <link rel="shortcut icon" href="./resources/svg/bomb-solid.svg" type="image/x-icon">
+    <script src="./resources/scripts/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Word Finder</h1>
+        <p>How to use: type the letters of the word you need > press enter > and get words</p>
+    </header>
+    <main>
+        <div class="inputs">
+            <label for="input-letters">Place your letters here</label><br><!--get rid of the <br> later-->
+            <input type="text" id="input-letters">
+            <input type="submit" value="Find!" id="submit-button">
+        </div>
+        <div class="outputs">
+            <p>Words containing those letters:</p>
+            <ul id="left-words">
+
+            </ul>
+            <p>Words starting with those letters:</p>
+            <ul id="right-words">
+
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>Made with luv for ma' boi ❤️</p>
+    </footer>
+</body>
+</html>
