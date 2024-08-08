@@ -6,15 +6,15 @@ const rightUL = document.getElementById("right-words");
 function fetchWord() {
     const apiUrl = "https://api.datamuse.com/words?sp=";
     const input = inputField.value;
-    const requestExtendLeft = `https://api.datamuse.com/words?sp=*${input}`;
-    const requestExtendRight = `https://api.datamuse.com/words?sp=${input}*`;
+    const requestExtendLeft = `${apiUrl}*${input}`;
+    const requestExtendRight = `${apiUrl}${input}*`;
 
     leftUL.innerHTML = "";
     rightUL.innerHTML = "";
     
     const searchWordLeft = async () => {
         try {
-            const response = await fetch(requestExtendLeft)
+            const response = await fetch(requestExtendLeft, {cache: "no-cache"})
             if (response.ok) {
                 const jsonResponse = await response.json();
                 for(let i = 0; jsonResponse.length && i < 10; i++) {
@@ -32,7 +32,7 @@ function fetchWord() {
 
     const searchWordRight = async () => {
         try {
-            const response = await fetch(requestExtendRight)
+            const response = await fetch(requestExtendRight, {cache: "no-cache"})
             if (response.ok) {
                 const jsonResponse = await response.json();
                 for(let i = 0; jsonResponse.length && i < 10; i++) {
